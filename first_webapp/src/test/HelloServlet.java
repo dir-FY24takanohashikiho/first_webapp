@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -22,35 +22,33 @@ public class HelloServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	        response.setContentType("text/html; charset=UTF-8");
-	        var out = response.getWriter();
-	        out.println("<html>");
-	        out.println("<head>");
-	        out.println("<title>はじめてのサーブレット</title>");
-	        out.println("</head>");
-	        out.println("<body>");
-	        out.println("こんにちは、サーブレットの世界へ！！");
-	        out.println("</body>");
-	        out.println("</html>");
-	    }
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+        /**
+         * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+         */
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                // TODO Auto-generated method stub
+                response.setContentType("text/html; charset=UTF-8");
+                var out = response.getWriter();
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>はじめてのサーブレット</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("こんにちは、サーブレットの世界へ！！");
+                out.println("</body>");
+                out.println("</html>");
+            }
+               
 
+        /**
+         * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+         */
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                // TODO Auto-generated method stub
+                doGet(request, response);
+        }
 
-
-	
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-	
+}
 	
 
 
